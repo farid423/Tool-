@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ImageCompress Pro - Optimize & Compress Images Online</title>
+    <meta name="description" content="Free online image compression tool with adjustable quality settings. Support for JPG, PNG, and WebP formats. SEO-friendly image optimization.">
+    <meta name="keywords" content="image compressor, optimize images, reduce file size, webp converter, SEO tools">
+    
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-YOUR_AD_CLIENT_ID" crossorigin="anonymous"></script>
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "ImageCompress Pro",
+        "description": "Online image compression tool with adjustable quality settings",
+        "applicationCategory": "Multimedia",
+        "operatingSystem": "Web",
+        "url": "https://yourdomain.com"
+    }
+    </script>
+
+    <style>
+        :root {
+            --primary: #2196F3;
+            --secondary: #607D8B;
+            --background: #f5f5f5;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            line-height: 1.6;
+            background: var(--background);
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            padding: 2rem 0;
+            background: white;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .main-content {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .upload-section {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .drop-zone {
+            border: 2px dashed var(--secondary);
+            padding: 3rem 1rem;
+            text-align: center;
+            cursor: pointer;
+            margin: 1rem 0;
+            transition: 0.3s;
+        }
+
+        .drop-zone:hover {
+            background: #f8f9fa;
+            border-color: var(--primary);
+        }
+
+        .controls {
+            margin: 2rem 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .quality-slider {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .preview-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .preview-img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .ad-section {
+            text-align: center;
+            padding: 1rem;
+            background: white;
+            border-radius: 10px;
+            margin: 1rem 0;
+        }
+
+        .btn {
+            background: var(--primary);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            opacity: 0.9;
+        }
+
+        @media (max-width: 768px) {
+            .preview-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .controls {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <h1>ImageCompress Pro</h1>
+            <p>Optimize your images for web with adjustable compression</p>
+        </div>
+    </header>
+
+    <!-- Ad Section -->
+    <div class="container">
+        <div class="ad-section">
+            <!-- AdSense Header Ad -->
+            <ins class="adsbygoogle"
+                style="display:block"
+                data-ad-client"https://github.com/farid423/Tool-.git
+                data-ad-slot="YOUR_AD_SLOT_ID"
+                data-ad-format="auto"
+                data-full-width-responsive="true"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="container">
+        <div class="main-content">
+            <!-- Compression Interface -->
+            <section class="upload-section">
+                <div class="drop-zone" id="dropZone">
+                    <p>Drag & drop images or click to upload</p>
+                    <input type="file" id="fileInput" accept="image/*" hidden>
+                </div>
+
+                <div class="controls">
+                    <input type="range" class="quality-slider" id="quality" 
+                           min="0" max="1" step="0.1" value="0.8">
+                    <button class="btn" id="compressBtn">Compress Now</button>
+                </div>
+
+                <div class="preview-container">
+                    <div>
+                        <h3>Original</h3>
+                        <img id="originalPreview" class="preview-img">
+                    </div>
+                    <div>
+                        <h3>Compressed</h3>
+                        <img id="compressedPreview" class="preview-img">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Sidebar Ad -->
+            <div class="ad-section">
+                <!-- AdSense Sidebar Ad -->
+                <ins class="adsbygoogle"
+                    style="display:block"
+                    data-ad-format="fluid"
+                    data-ad-layout-key="-gw-3+1f-3d+2z"
+                    data-ad-client="https://github.com/farid423/Tool-.git
+                    data-ad-slot="YOUR_AD_SLOT_ID"></ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // DOM Elements
+        const dropZone = document.getElementById('dropZone');
+        const fileInput = document.getElementById('fileInput');
+        const compressBtn = document.getElementById('compressBtn');
+        const qualitySlider = document.getElementById('quality');
+
+        // Event Listeners
+        dropZone.addEventListener('click', () => fileInput.click());
+        dropZone.addEventListener('dragover', (e) => e.preventDefault());
+        dropZone.addEventListener('drop', handleDrop);
+
+        compressBtn.addEventListener('click', compressImage);
+
+        async function handleDrop(e) {
+            e.preventDefault();
+            const file = e.dataTransfer.files[0];
+            if (file) handleImage(file);
+        }
+
+        fileInput.addEventListener('change', (e) => {
+            const file = e.target.files[0];
+            if (file) handleImage(file);
+        });
+
+        async function handleImage(file) {
+            const img = await createImageBitmap(file);
+            document.getElementById('originalPreview').src = URL.createObjectURL(file);
+        }
+
+        async function compressImage() {
+            const file = fileInput.files[0];
+            if (!file) return alert('Please select an image first');
+
+            const quality = parseFloat(qualitySlider.value);
+            const canvas = document.createElement('canvas');
+            const ctx = canvas.getContext('2d');
+            
+            const img = await createImageBitmap(file);
+            canvas.width = img.width;
+            canvas.height = img.height;
+            ctx.drawImage(img, 0, 0);
+
+            canvas.toBlob((blob) => {
+                const compressedUrl = URL.createObjectURL(blob);
+                document.getElementById('compressedPreview').src = compressedUrl;
+                
+                // Create download link
+                const link = document.createElement('a');
+                link.download = `compressed_${file.name}`;
+                link.href = compressedUrl;
+                link.click();
+            }, file.type, quality);
+        }
+    </script>
+</body>
+</html>
